@@ -1,0 +1,112 @@
+﻿@model FoodTruckWebsite.Models.Menu
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Menu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.foodTruckName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodTruckName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice5)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

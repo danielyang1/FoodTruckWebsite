@@ -1,0 +1,93 @@
+﻿@model IEnumerable<FoodTruckWebsite.Models.Menu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.foodTruckName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foodItem1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foodItem2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foodItem3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foodItem4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foodItem5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemPrice1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemPrice2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemPrice3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemPrice4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemPrice5)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodTruckName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodItem1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodItem2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodItem3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodItem4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodItem5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemPrice1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemPrice2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemPrice3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemPrice4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemPrice5)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
