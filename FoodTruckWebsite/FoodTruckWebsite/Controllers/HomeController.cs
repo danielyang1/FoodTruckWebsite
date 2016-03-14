@@ -12,6 +12,10 @@ namespace FoodTruckWebsite.Controllers
         {
             return View();
         }
+        public ActionResult Thanky()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {

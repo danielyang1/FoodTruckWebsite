@@ -3,7 +3,7 @@ namespace FoodTruckWebsite.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class init : DbMigration
+    public partial class one : DbMigration
     {
         public override void Up()
         {
@@ -23,6 +23,7 @@ namespace FoodTruckWebsite.Migrations
                         itemPrice3 = c.Double(nullable: false),
                         itemPrice4 = c.Double(nullable: false),
                         itemPrice5 = c.Double(nullable: false),
+                        UserID = c.String(),
                     })
                 .PrimaryKey(t => t.id);
             

@@ -1,0 +1,110 @@
+﻿@model FoodTruckWebsite.Models.Menu
+
+@{
+    ViewBag.Title = "Index1";
+}
+
+<h2>Mikey D's</h2>
+
+<div>
+    <h4>Menu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mikey D's Food Truck
+        </dt>
+
+        <dt>
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="P8BQ4XAK7PE8J">
+                <input type="hidden" name="amount" value="5.25">
+                <input type="hidden" name="lc" value="US">
+                <input type="hidden" name="item_name" value="Burger">
+                <input type="hidden" name="button_subtype" value="services">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="return" value="http://localhost:2523/Home/Thanky">
+                <input type="hidden" name="cbt" value="Continue FOOD TRUCKIN" src="http://localhost:2523/Home/Thanky">
+                <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+                <input type="image" src="~/Content/img-large-burger.jpg" border="0" width="150" height="100" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </dt>   
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodItem5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodItem5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice5)
+        </dd>
+    </dl>
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

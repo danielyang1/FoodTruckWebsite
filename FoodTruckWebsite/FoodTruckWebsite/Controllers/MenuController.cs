@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FoodTruckWebsite.Models;
+using Microsoft.AspNet.Identity;
 
 namespace FoodTruckWebsite.Controllers
 {
@@ -17,6 +18,9 @@ namespace FoodTruckWebsite.Controllers
         // GET: Menu
         public ActionResult Index()
         {
+            //string userID = User.Identity.GetUserId();
+            //List<Menu> menus = db.Menus.Select(x => x).Where(y => y.UserID == userID).ToList();
+            //return View(menus);
             return View(db.Menus.ToList());
         }
 
@@ -41,6 +45,15 @@ namespace FoodTruckWebsite.Controllers
             return View();
         }
 
+        public ActionResult Index1()
+        {
+            return View();
+        }
+        public ActionResult Index2()
+        {
+            return View();
+        }
+
         // POST: Menu/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -50,6 +63,7 @@ namespace FoodTruckWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
+                menu.UserID = User.Identity.GetUserId();
                 db.Menus.Add(menu);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -65,7 +79,14 @@ namespace FoodTruckWebsite.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Menu menu = db.Menus.Find(id);
+            Menu menu = db.Menus.Find(id);  
+            //if (db.Menus.Select(x=>x) == null)
+            //{
+            //    return RedirectToAction("Create");
+            //}
+            //else
+                menu.UserID = User.Identity.GetUserId();
+                db.SaveChanges();
             if (menu == null)
             {
                 return HttpNotFound();

@@ -202,9 +202,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603112157287_init.cs" />
-    <Compile Include="Migrations\201603112157287_init.Designer.cs">
-      <DependentUpon>201603112157287_init.cs</DependentUpon>
+    <Compile Include="Migrations\201603141710237_one.cs" />
+    <Compile Include="Migrations\201603141710237_one.Designer.cs">
+      <DependentUpon>201603141710237_one.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -218,6 +218,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img-large-burger.jpg" />
     <Content Include="Content\yeti.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -281,6 +282,9 @@
     <Content Include="Views\Menu\Details.cshtml" />
     <Content Include="Views\Menu\Edit.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\Index1.cshtml" />
+    <Content Include="Views\Menu\Index2.cshtml" />
+    <Content Include="Views\Home\Thanky.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -294,8 +298,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603112157287_init.resx">
-      <DependentUpon>201603112157287_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201603141710237_one.resx">
+      <DependentUpon>201603141710237_one.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
