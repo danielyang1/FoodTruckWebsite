@@ -18,10 +18,10 @@ namespace FoodTruckWebsite.Controllers
         // GET: Menu
         public ActionResult Index()
         {
-            //string userID = User.Identity.GetUserId();
-            //List<Menu> menus = db.Menus.Select(x => x).Where(y => y.UserID == userID).ToList();
-            //return View(menus);
-            return View(db.Menus.ToList());
+            string userID = User.Identity.GetUserId();
+            List<Menu> menus = db.Menus.Select(x => x).Where(y => y.UserID == userID).ToList();
+            return View(menus);
+            //return View(db.Menus.ToList());
         }
 
         // GET: Menu/Details/5
